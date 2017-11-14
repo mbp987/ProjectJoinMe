@@ -1,5 +1,5 @@
-create database joinme;
-use joinme;
+CREATE DATABASE joinme DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE joinme;
 #drop database joinme;
 
 
