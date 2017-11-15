@@ -1,0 +1,21 @@
+id_cinema	id_event	cname	street	snumber	city
+1	c	Atlantic	Chmielna	33	Warszawa
+2	c	Cinema City Arkadia	Jana Pawła II	82	Warszawa
+3	c	Cinema City Bemowo 	Powstańców Śląskich 	126	Warszawa
+4	c	Cinema City Janki 	Mszczonowska	3	Warszawa
+5	c	Cinema City Mokotów 	Wołoska	12	Warszawa
+6	c	Cinema City Promenada 	Ostrobramska	75	Warszawa
+7	c	Cinema City Sadyba	Powsińska	31	Warszawa
+8	c	Cinema City Wola 	Górczewska	124	Warszawa
+9	c	Iluzjon Filmoteki Narodowej 	Narbutta	50	Warszawa
+10	c	Kino.Lab 	Aleje Ujazdowskie	6	Warszawa
+11	c	Kinoteka 	pl. Defilad	1	Warszawa
+12	c	Kultura 	Krakowskie Przedmieście	21	Warszawa
+13	c	Luna 	Marszałkowska	28	Warszawa
+14	c	Multikino Targówek 	Głębocka	15	Warszawa
+15	c	Multikino Ursynów	Komisji Edukacji Narodowej	60	Warszawa
+16	c	Multikino Złote Tarasy 	Złota	59	Warszawa
+17	c	Muranów 	gen. Andersa	1	Warszawa
+18	c	NoveKino Praha 	Jagiellońska	26	Warszawa
+19	c	Orange IMAX Warszawa 	Powsińska	31	Warszawa
+20	c	Wisła 	pl. Wilsona	2	Warszawa

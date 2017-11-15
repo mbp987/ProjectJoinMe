@@ -1,0 +1,47 @@
+id_theatre	id_event	tname	street	snumber	city
+1	t	Operetka	Kolumbijska	3	Warszawa
+2	t	Nowy Teatr	Madalińskiego	10	Warszawa
+3	t	Och-Teatr	Grójecka	65	Warszawa
+4	t	Stara ProchOFFnia	Boleść	2	Warszawa
+5	t	Studio Buffo	Konopnickiej	6	Warszawa
+6	t	Studium Teatralne	Lubelska	30	Warszawa
+7	t	Teatr Capitol	Marszałkowska	115	Warszawa
+8	t	Teatr Polonia	Marszałkowska	56	Warszawa
+9	t	Teatr 6. piętro	Pałac Kultury i Nauki	1	Warszawa
+10	t	Teatr Ateneum	Jaracza	2	Warszawa
+11	t	Teatr Baj	Jagiellońska	28	Warszawa
+12	t	Teatr Bajka	Marszałkowska	138	Warszawa
+13	t	Teatr Collegium Nobilium	Miodowa	22	Warszawa
+14	t	Teatr Dramatyczny	Pałac Kultury i Nauki	1	Warszawa
+15	t	Teatr Druga Strefa	Magazynowa	14	Warszawa
+16	t	Teatr Guliwer	Różana	16	Warszawa
+17	t	Teatr IMKA	Konopnickiej	6	Warszawa
+18	t	Teatr Kamienica	Al. Solidarności	93	Warszawa
+19	t	Teatr Komedia	Słowackiego	19	Warszawa
+20	t	Teatr Kwadrat	Czackiego	15	Warszawa
+21	t	Teatr Lalka	Pałac Kultury i Nauki	1	Warszawa
+22	t	Teatr Małego Widza	Jezuicka	4	Warszawa
+23	t	Teatr Montownia	Konopnickiej	6	Warszawa
+24	t	Teatr Muzyczny Roma	Nowogrodzka	49	Warszawa
+25	t	Teatr na Woli	Kasprzaka	22	Warszawa
+26	t	Teatr Narodowy	Wierzbowa	3	Warszawa
+27	t	Teatr Ochoty	Reja	9	Warszawa
+28	t	Teatr Polski	Karasia	2	Warszawa
+29	t	Teatr Powszechny	Zamoyskiego	20	Warszawa
+30	t	Teatr Praga	Otwocka	14	Warszawa
+31	t	Teatr Praski	Kępna	6	Warszawa
+32	t	Teatr Rampa	Kołowa	20	Warszawa
+33	t	Teatr Rozmaitości	Marszałkowska	8	Warszawa
+34	t	Teatr Sabat	Foksal	16	Warszawa
+35	t	Teatr Scena Prezentacje	Żelazna	51	Warszawa
+36	t	Teatr Staromiejski	Jezuicka	4	Warszawa
+37	t	Teatr Studio	Pałac Kultury i Nauki	1	Warszawa
+38	t	Teatr Syrena	Litewska	3	Warszawa
+39	t	Teatr WARSawy	Rynek Nowego Miasta	5	Warszawa
+40	t	Teatr Wielki - Opera Narodowa	plac Teatralny	1	Warszawa
+41	t	Teatr Wolandejski	Lachmana	5	Warszawa
+42	t	Teatr Współczesny	Mokotowska	13	Warszawa
+43	t	Teatr Wytwórnia	Markowska	18	Warszawa
+44	t	Teatr Za Daleki	Wiolinowa	14	Warszawa
+45	t	Teatr Żydowski	plac Grzybowski	12	Warszawa
+46	t	Warszawska Opera Kameralna	Al. Solidarności	76	Warszawa

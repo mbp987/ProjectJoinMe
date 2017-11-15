@@ -1,0 +1,6 @@
+id_contact	id_user	 message	 sending	 date_contact	 time_contact
+1	3	mam problem z wylogowaniem	 1	2017-10-12	10:00:02
+2	13	veni vidi vici	 1	2017-10-13	12:40:12
+3	1	zmien szate graficzna	 1	2017-10-15	15:40:12
+4	5	error	 1	2017-10-15	15:47:15
+5	8	grrrrrrrrrrrr	 1	2017-10-17	05:55:15

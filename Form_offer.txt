@@ -1,0 +1,11 @@
+id_offer	id_user	date_o	time_o	art.	payment	pref_gender	pref_age	id_event
+1	15	2017-08-01	01:01:02	Titanic	2	F	20	c
+2	16	2017-08-02	13:55:39	Czekolada	2	F	30	c
+3	17	2017-08-03	14:55:39	Blade Runner	2	F	30	c
+4	9	2017-09-13	10:01:02	Botoks	1	F	50	c
+5	10	2017-09-14	11:01:02	Świętoszek	1	M	40	t
+6	11	2017-09-15	10:43:32	Balladyna	1	M	30	t
+7	3	2017-09-07	19:33:02	Botoks	2	F	40	c
+8	13	2017-09-08	08:01:02	Zemsta	1	F	20	t
+9	14	2017-09-09	09:01:02	Szalone nożyczki	2	M	20	t
+10	15	2017-09-10	10:01:02	Botoks	1	F	40	c

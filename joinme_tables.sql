@@ -53,7 +53,7 @@ CREATE TABLE Form_offer (
     id_user INT(10) ZEROFILL,
     id_event VARCHAR(5),
     date_o DATE,
-    time_o DATETIME,
+    time_o TIME,
     art VARCHAR(30),
     payment VARCHAR(15),
     pref_gender VARCHAR(1),
@@ -73,8 +73,8 @@ CREATE TABLE Form_cand (
     id_user_c INT(10) ZEROFILL,
     date_limit DATE,
     time_limit TIME,
-    approval_c INT(5),
-    approval_o INT(5),
+    approval_c BOOLEAN,
+    approval_o BOOLEAN,
     FOREIGN KEY (id_offer)
         REFERENCES Form_offer (id_offer),
     FOREIGN KEY (id_user_o)
@@ -86,6 +86,7 @@ CREATE TABLE Form_cand (
 
 
 CREATE TABLE User_log (
+    id_log INT(10) ZEROFILL AUTO_INCREMENT PRIMARY KEY,
     id_user INT(10) ZEROFILL,
     user_pass VARCHAR(30),
     date_login DATE,
@@ -98,16 +99,47 @@ CREATE TABLE User_log (
 
 
 CREATE TABLE Form_contact (
+	id_contact INT(10) ZEROFILL AUTO_INCREMENT PRIMARY KEY,
     id_user INT(10) ZEROFILL,
     message TEXT(200),
     sending BOOLEAN,
     date_contact DATE,
-    time_contact DATETIME,
+    time_contact TIME,
     FOREIGN KEY (id_user)
         REFERENCES users (id_user)
 );
 #drop table Form_contact;
 
+
+
+############################################
+-- adding example data to tables manually (small table)
+
+insert into VarEvents(id_event, event_name) values ('c', 'cinema');
+insert into VarEvents(id_event, event_name) values ('t', 'theatre');
+
+
+-- adding example data to tables from *.txt files
+
+
+load data local infile 'Users/mbp/Desktop/ProjectJoinMe/Users.txt' into table Users fields terminated by '\t' lines terminated by '\n' ignore 1 lines (id_user, login, user_pass, email, gender, birthdate);
+
+load data local infile 'Users/mbp/Desktop/ProjectJoinMe//User_log.txt' into table User_log fields terminated by '\t' lines terminated by '\n' ignore 1 lines (id_user, user_pass, date_login, time_login, user_language);
+
+load data local infile 'Users/mbp/Desktop/ProjectJoinMe/Cinemas.txt' into table Cinemas fields terminated by '\t' lines terminated by '\n' ignore 1 lines (id_cinema, id_event, cname, street, snumber, city);
+
+load data local infile 'Users/mbp/Desktop/ProjectJoinMe/Theatres.txt' into table Theatres fields terminated by '\t' lines terminated by '\n' ignore 1 lines (id_theatre, id_event, tname, street, snumber, city);
+
+load data local infile 'Users/mbp/Desktop/ProjectJoinMe/Form_offer.txt' into table Form_offer fields terminated by '\t' lines terminated by '\n' ignore 1 lines (id_offer, id_user, date_o, time_o, art, payment, pref_gender, pref_age, id_event);
+
+load data local infile 'Users/mbp/Desktop/ProjectJoinMe/Form_cand.txt' into table Form_cand fields terminated by '\t' lines terminated by '\n' ignore 1 lines (id_answer, id_offer, id_user_o, id_user_c, date_limit, time_limit, approval_c, approval_o);
+
+load data local infile 'Users/mbp/Desktop/ProjectJoinMe/Form_contact.txt' into table Form_contact fields terminated by '\t' lines terminated by '\n' ignore 1 lines (id_contact, id_user, message, sending, date_contact, time_contact);
+
+
+
+############################################
+-- helpful for checking
 
 #SELECT * FROM Users;
 #SELECT * FROM User_log;
