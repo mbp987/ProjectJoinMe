@@ -6,9 +6,9 @@ class Visitor():
         self.conn = conn
         self.cursor = cursor
         
-        print(100*'_'+100*' '+'\n'+'\nHere you may:   (R) - Register   (L) - Login   (W) - Write to us   (Q) - Quit')
-        print(100*' ')
-        print('Or just see the events:   (C) - Cinema   (T) - Theatre\n'+100*'_')
+        print(106*'_'+106*' '+'\n'+'\nHere you may:   (R) - Register   (L) - Login   (W) - Write to us   (Q) - Quit')
+        print(106*' ')
+        print('Or just see the events:   (C) - Cinema   (T) - Theatre\n'+106*'_')
         
         choice = input().upper()
         
@@ -57,33 +57,48 @@ class Visitor():
         
         
     def register(self):
+        
+        login = input('Choose your login: ')
+        user_pass = input('Insert your password: ')
+        email = input('Email: ')
+        gender = input('Gender (F/M): ').upper()
+        birthdate = input('Year of your birth (YYYY): ')
+        #tu jest problem
+        self.cursor.execute("INSERT INTO users(login, user_pass, email, gender, birthdate) VALUES (%s, %s, %s, %s, %s)" % (login, user_pass, email, gender, birthdate))
+        self.conn.commit()        
+        
         print('Not available - building in progess...')
-        v = Visitor(self.conn, self.cursor)
+        v = Visitor(self.conn, self.cursor)        
         
         
     def login(self):
+        login = input('Insert your login: ')
+        user_pass = input('Password: ')
+        #do dokonczenia
         print('Not available - building in progess...')
         v = Visitor(self.conn, self.cursor)
         
         
     def write(self):
-        #self.conn = conn
-        #self.cursor = cursor        
-        print(100*'_'+'\n'+100*' '+'\nIf you have any query, problem or sugestion, \nplease leave a short message including your email below and press Enter.\nTo back to the previous screen just press Enter.\n'+100*'_')    
+        print(106*'_'+'\n'+106*' '+'\nIf you have any query, problem or sugestion,\n    please leave a short message including your email below and press Enter.\nTo back to the previous screen just press Enter.\n'+106*'_')    
         message = input()
         
         while not message:
-            print(100*'_'+'\nNo message - redirecting to Visitor profile')
+            print(106*'_'+'\nNo message - redirecting to Visitor profile')
             v = Visitor(self.conn, self.cursor)
             break
-        
         else:
-            self.cursor.execute("INSERT INTO Form_contact(id_user, message, sending) VALUES (NULL, 'wiadomosc testowa1zwinga', True)")
+            #tu jest problem
+            self.cursor.execute("INSERT INTO form_contact (id_user, message, sending) VALUES (NULL, 'wiadomosc testowa1zwinga', True);")
             self.conn.commit()
+            #self.conn.close()
+            #self.cursor.execute("select * from form_contact;")
+            #res = self.cursor.fetchall() 
+            #print(res)
             print( )
             print(46*'@'+'\n@'+9*' '+'Thank you for the message!'+9*' '+'@\n@ We will reply at our earliest convenience. @\n'+46*'@')
             v = Visitor(self.conn, self.cursor)
-        
+            
         
     def quit(self):
         print('See you soon. Bye!')
