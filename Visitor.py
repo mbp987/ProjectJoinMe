@@ -54,22 +54,19 @@ class Visitor():
                     pref_age = row[8]
                     print('| %12s | %10s | %20s | %10s | %15s | %20s |' % (date_o, time_o, art, payment, pref_gender, pref_age))
                 print(106*'-')
-                '''v = Visitor(self.conn, self.cursor)'''
             else:
                 print('Bye anyway')
         
         
     def register(self):
+        #do dodania - ograniczenia w inputach
         login = input('Choose your login: ')
         user_pass = input('Insert your password: ')
         email = input('Email: ')
-        gender = input('Gender (F/M): ').upper()
+        gender = input('Gender (F/M): ').lower()
         birthdate = input('Year of your birth (YYYY): ')
-        #tu jest problem
-        self.cursor.execute("INSERT INTO users (login, user_pass, email, gender, birthdate) VALUES (%s, %s, %s, %s, %s)" % (login, user_pass, email, gender, birthdate))      
-        
-        print('Not available - building in progess...')
-        '''v = Visitor(self.conn, self.cursor)'''        
+        self.cursor.execute("INSERT INTO users (login, user_pass, email, gender, birthdate) VALUES ('%s', '%s', '%s', '%s', '%s')" % (login, user_pass, email, gender, birthdate))
+        print('\nCongratulations! Now you are registered at JoinMe.\n ')      
         
         
     def login(self):
@@ -77,28 +74,21 @@ class Visitor():
         user_pass = input('Password: ')
         #do dokonczenia
         print('Not available - building in progess...')
-        '''v = Visitor(self.conn, self.cursor)'''
         
         
     def write(self):
         print(106*'_'+'\n'+106*' '+'\nIf you have any query, problem or sugestion,\n    please leave a short message including your email below and press Enter.\nTo back to the previous screen just press Enter.\n'+106*'_')    
         message = input()
-        #id_user = "null"
-        #sending = "1"
         
         while not message:
             print(106*'_'+'\nNo message - redirecting to Visitor profile')
-            '''v = Visitor(self.conn, self.cursor)'''
             break
         else:
-            #tu jest problem
-            # to dziala!!!!    self.cursor.execute("INSERT INTO form_contact (message) VALUES ('%s')" % (message))
-            #self.cursor.execute("INSERT INTO form_contact (id_user, message, sending) VALUES ('%s', '%s', '%s')", ('', message, sending))
-            self.cursor.execute("INSERT INTO form_contact (message) VALUES ('%s')" % (message))
-            print(self.cursor.fetchall()) 
-            print( )
-            print(46*'@'+'\n@'+9*' '+'Thank you for the message!'+9*' '+'@\n@ We will reply at our earliest convenience. @\n'+46*'@')
-            '''v = Visitor(self.conn, self.cursor)'''     
+            sending = 1
+            # do zrobienia ("INSERT INTO form_contact (message, sending, date_contact, time_contact)
+            self.cursor.execute("INSERT INTO form_contact (message, sending) VALUES ('%s', '%i')" % (message, sending))
+            print(' ')
+            print(46*'@'+'\n@'+9*' '+'Thank you for the message!'+9*' '+'@\n@ We will reply at our earliest convenience. @\n'+46*'@')   
         
     def quit(self):
         print('See you soon. Bye!')
