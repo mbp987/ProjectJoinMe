@@ -14,3 +14,6 @@ class Admin():
             cname = row[2]
             street = row[3]
             print('%40s | %20s' % (cname, street))
+            
+    def message(self):
+        print('tutaj Admin bedzie sie zajmowal wiadomosciami')
